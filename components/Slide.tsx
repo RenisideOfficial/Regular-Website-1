@@ -3,7 +3,7 @@ import React from "react";
 
 const Slide = ({ img, description }: Believe) => {
   return (
-    <div className="flex flex-col items-center text-center p-4 mt-[20%]">
+    <div className="flex flex-col items-center text-center p-4">
       <div className="relative w-[170px] h-[170px] mb-4">
         <Image
           src={img}
