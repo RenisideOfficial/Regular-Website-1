@@ -48,7 +48,7 @@ const Believe = () => {
 
   return (
     <div className="px-4 py-8 md:px-8 mt-[20%] space-y-24">
-      <h1 className="lg:text-4xl text-3xl text-center [text-shadow:3px_3px_6px_var(--color-primary)]">
+      <h1 className="lg:text-4xl text-3xl text-center [text-shadow:3px_3px_6px_var(--color-gold)]">
         What we believe?
       </h1>
       <Slider {...settings}>

@@ -9,13 +9,13 @@ const MoreInfo = () => {
       <div className="lg:flex justify-between align-center mx-12 mt-[15%] font-bold gap-6">
         <div>
           <div className="flex gap-4">
-            <h3 className="lg:text-5xl text-3xl [text-shadow:3px_3px_6px_var(--color-primary)]">
+            <h3 className="lg:text-5xl text-3xl [text-shadow:3px_3px_6px_var(--color-gold)]">
               Legal
             </h3>
             <Image src={verified} alt="verified" width={30} />
           </div>
-          <p className="lg:text-3xl text-[1rem] [text-shadow:1px_1px_3px_var(--color-primary)] mt-12">
-            HAROLD CAPITAL is the brand name used by HAROLD MARKET'S LTD. It is
+          <p className="lg:text-3xl text-[1rem] [text-shadow:1px_1px_3px_var(--color-gold)] mt-12">
+            HAROLD CAPITAL is the brand name used by HAROLD MARKETS LTD. It is
             a powerhouse of Risk management which is used for significant
             investment returns.
           </p>

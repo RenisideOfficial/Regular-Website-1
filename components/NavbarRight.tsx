@@ -1,57 +1,74 @@
 "use client";
-import { cn } from "@/libs/utils";
-import Link from "next/link";
-import React, { useState } from "react";
+import { cn } from "@/lib/utils";
+import { Link as ScrollLink } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
+import React, { useState } from "react"; // Removed unused useEffect
 
-const NavbarRight = () => {
+const NavbarRight = ({ activeSection = "home" }: NavbarRightProps) => {
   const [open, setOpen] = useState(false);
-  const [isActive, setIsActive] = useState(0);
-  const navData = ["Home", "About Us", "Solutions", "Contact"];
+
+  const navData = [
+    { name: "Home", target: "home" },
+    { name: "About Us", target: "about" },
+    { name: "Solutions", target: "solutions" },
+    { name: "Contact", target: "contact" },
+  ];
+
   return (
     <>
+      {/* Desktop Navigation */}
       <div className="gap-2 hidden md:flex">
         {navData.map((item, index) => (
-          <Link
-            href="#"
+          <ScrollLink
             key={index}
+            to={item.target}
+            smooth={true}
+            duration={500}
+            offset={-80}
             className={cn(
-              "mx-6 hover:text-gray",
-              isActive === index && "text-gray border-b-2 border-b-white"
+              "mx-6 hover:text-gray cursor-pointer pb-1 transition-all",
+              activeSection === item.target && "border-b-2 border-b-white"
             )}
-            onClick={() => setIsActive(index)}
+            spy={true}
+            activeClass="active"
           >
-            {item}
-          </Link>
+            {item.name}
+          </ScrollLink>
         ))}
       </div>
 
-      <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
-        {open === true ? (
-          <FaTimes className="z-50 fixed right-6 top-10" />
+      {/* Mobile Toggle Button */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="md:hidden text-2xl"
+        aria-label="Toggle menu"
+      >
+        {open ? (
+          <FaTimes className="lg:right-12 z-[1001] fixed right-6 top-10" />
         ) : (
           <RiMenu3Line />
         )}
       </button>
 
+      {/* Mobile Menu */}
       {open && (
-        <div className="flex flex-col justify-center align-center w-full rounded-b-2xl left-0 top-0 fixed text-center bg-dark p-12">
+        <div className="md:hidden flex flex-col z-[1000] justify-center align-center w-full rounded-b-2xl left-0 top-0 fixed text-center bg-dark p-12">
           {navData.map((item, index) => (
-            <Link
-              href="#"
+            <ScrollLink
               key={index}
+              to={item.target}
+              smooth={true}
+              duration={500}
+              offset={-80}
               className={cn(
-                "mt-6 hover:text-gray",
-                isActive === index && "text-darker"
+                "block mt-6 hover:text-gray cursor-pointer text-xl pb-1",
+                activeSection === item.target && "border-b-2 border-b-white"
               )}
-              onClick={() => {
-                setIsActive(index);
-                setOpen(false);
-              }}
+              onClick={() => setOpen(false)} // Only close the menu
             >
-              {item}
-            </Link>
+              {item.name}
+            </ScrollLink>
           ))}
         </div>
       )}

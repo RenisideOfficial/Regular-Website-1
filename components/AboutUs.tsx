@@ -11,7 +11,7 @@ const AboutUs = () => {
           alt="img2"
           className="w-[70%] lg:w-[45%] mt-6 lg:-mt-6"
         />
-        <p className="lg:text-3xl text-[1rem] [text-shadow:1px_1px_3px_var(--color-primary)] mt-4">
+        <p className="lg:text-3xl text-[1rem] [text-shadow:1px_1px_3px_var(--color-gold)] mt-4">
           HAROLD CAPITAL is a pioneer in non-interest finance in Nigeria and
           duly registered with the Federal Corperate Affairs commission Nigeria.
           it is authorized and regulated by CAC {"(NIGERIA)."}

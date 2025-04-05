@@ -7,10 +7,10 @@ const Hero = () => {
     <>
       <div className="lg:flex justify-between align-center mx-12 mt-24 font-bold gap-6">
         <div className="mt-18">
-          <h1 className="lg:text-6xl text-3xl [text-shadow:3px_3px_6px_var(--color-primary)]">
+          <h1 className="lg:text-6xl text-3xl [text-shadow:3px_3px_6px_var(--color-gold)]">
             WELCOME TO HAROLD CAPITAL
           </h1>
-          <p className="lg:text-3xl text-[1rem] [text-shadow:1px_1px_3px_var(--color-primary)] mt-4">
+          <p className="lg:text-3xl text-[1rem] [text-shadow:1px_1px_3px_var(--color-gold)] mt-4">
             HAROLD CAPITAL LTD is a full-service ethical investment management
             company specializing in Asset Management, Private Wealth Management,
             and Financial Advisory services.
