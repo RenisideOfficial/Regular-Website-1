@@ -5,7 +5,7 @@ const pass = process.env.EMAIL_PASS;
 
 // if no variable in the env
 if (!email || !pass) {
-    throw new Error("EMAIL or EMAIL_PASS environment variables are not configured");
+    throw new Error("EMAIL or EMAIL_PASS environment variables are not configured");    
 }
 
 export const transport = nodemailer.createTransport({

@@ -8,24 +8,31 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    // Set home as active on initial load
-    setActiveSection("home");
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // If at the very top of the page, set home as active
+      if (window.scrollY === 0) {
+        setActiveSection("home");
+        return;
+      }
 
       const sections = ["home", "about", "solutions", "contact"];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
+          // More precise detection with larger threshold
+          if (rect.top <= 150 && rect.bottom >= 150) {
             setActiveSection(section);
             break;
           }
         }
       }
     };
+
+    // Set initial state
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

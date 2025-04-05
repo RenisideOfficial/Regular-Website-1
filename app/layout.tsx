@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   title: "Harold Capital",
@@ -25,6 +27,7 @@ export default function RootLayout({
         </section>
         {children}
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );

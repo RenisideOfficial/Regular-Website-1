@@ -6,10 +6,10 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
-import { toast } from "sonner";
 import { cn, contactFormSchema, ContactFormData } from "@/lib/utils";
 import { sendContactForm } from "@/lib/api";
 import { CircleLoader } from "react-spinners";
+import { toast } from "react-toastify";
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);

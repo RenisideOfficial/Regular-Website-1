@@ -3,6 +3,7 @@ import  {transport, mailOption} from "@/config/nodemailer";
 import { contactFormSchema } from "@/lib/utils";
 import type { ContactFormData } from "@/lib/utils";
 
+// api endpoint
 export async function POST(request: Request) {
   try {
     const body: ContactFormData = await request.json();
