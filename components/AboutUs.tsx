@@ -11,10 +11,10 @@ const AboutUs = () => {
           alt="img2"
           className="w-[70%] lg:w-[45%] mt-6 lg:-mt-6"
         />
-        <p className="lg:text-3xl text-[1rem] [text-shadow:1px_1px_3px_var(--color-gold)] mt-4">
-          HAROLD CAPITAL specializes in strategic & Analytic
-          investment/speculation services in Nigeria & is duly licensed &
-          Authorized by CAC {"(corporate affairs commission)"} NIGERIA.
+        <p className="text-base lg:text-3xl [text-shadow:1px_1px_3px_var(--color-gold)] mt-4">
+          HAROLD CAPITAL specializes in strategic and analytic
+          investment/speculation services in Nigeria and is duly licensed and
+          authorized by CAC {"(Corporate Affairs Commission)"} NIGERIA.
         </p>
       </div>
     </>
