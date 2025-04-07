@@ -12,8 +12,8 @@ const Hero = () => {
           </h1>
           <p className="lg:text-3xl text-[1rem] [text-shadow:1px_1px_3px_var(--color-gold)] mt-4">
             HAROLD CAPITAL LTD is a full-service ethical investment management
-            company specializing in Asset Management, Private Wealth Management,
-            and Financial Advisory services.
+            company specializing in Asset Management, Wealth Management, and
+            Financial Advisory services.
           </p>
         </div>
         <Image

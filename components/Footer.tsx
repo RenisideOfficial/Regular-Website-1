@@ -6,8 +6,7 @@ const Footer = () => {
     <>
       <div className="bg-darker p-12 space-y-6">
         <p>
-          Harold Capital Management is a Lagos based, Male founded and led,
-          growth equity, impact investment company.
+          Harold Capital is a Lagos based Male founded and led investment firm.
         </p>
         <hr />
         <div className="lg:flex lg:flex-row flex flex-col gap-2 justify-baseline">

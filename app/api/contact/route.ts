@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import  {transport, mailOption} from "@/config/nodemailer";
-import { contactFormSchema } from "@/lib/utils";
-import type { ContactFormData } from "@/lib/utils";
+import { type ContactFormData, contactFormSchema } from "@/lib/utils";
 
 // api endpoint
 export async function POST(request: Request) {
@@ -19,10 +18,8 @@ export async function POST(request: Request) {
         
         Name: ${validatedData.name}
         Email: ${validatedData.email}
-        Subject: ${validatedData.subject}
-        
-        Message:
-        ${validatedData.message}
+        Subject: ${validatedData.subject}    
+        Message: ${validatedData.message}
       `,
       html: `
         <h1>New contact form submission</h1>
