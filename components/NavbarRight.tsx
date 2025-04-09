@@ -62,8 +62,8 @@ const NavbarRight = ({ activeSection = "home" }: NavbarRightProps) => {
               duration={500}
               offset={-80}
               className={cn(
-                "block mt-6 hover:text-gray cursor-pointer text-xl pb-1",
-                activeSection === item.target && "border-b-2 border-b-white"
+                "block mt-6 hover:text-darker cursor-pointer text-xl pb-1",
+                activeSection === item.target && "text-darkest"
               )}
               onClick={() => setOpen(false)} // Only close the menu
             >
