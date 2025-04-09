@@ -15,9 +15,7 @@ const MoreInfo = () => {
             <Image src={verified} alt="verified" width={30} />
           </div>
           <p className="lg:text-3xl text-[1rem] [text-shadow:1px_1px_3px_var(--color-gold)] mt-12">
-            HAROLD CAPITAL is the brand name used by HAROLD MARKETS LTD. It is
-            a powerhouse of Risk management which is used for significant
-            investment returns.
+            <b>HAROLD CAPITAL</b> is the brand name used by HAROLD MARKETS LTD.
           </p>
         </div>
         <Image
