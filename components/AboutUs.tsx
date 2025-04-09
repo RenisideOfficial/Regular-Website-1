@@ -14,7 +14,7 @@ const AboutUs = () => {
         <p className="text-base lg:text-3xl [text-shadow:1px_1px_3px_var(--color-gold)] mt-4">
           HAROLD CAPITAL specializes in strategic and analytic
           investment/speculation services in Nigeria and is duly licensed and
-          authorized by CAC {"(Corporate Affairs Commission)"} NIGERIA
+          authorized by CAC {"(Federal Corporate Affairs Commission)"} NIGERIA
         </p>
       </div>
     </>
