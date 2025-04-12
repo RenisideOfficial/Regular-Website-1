@@ -3,6 +3,7 @@ import React from "react";
 import haroldImg from "../public/harold.svg";
 
 const NavbarLeft = () => {
+  // simple function to scroll to top window
   const handleHomeClick = () => {
     window.scrollTo({
       top: 0,

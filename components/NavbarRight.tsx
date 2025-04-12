@@ -38,7 +38,6 @@ const NavbarRight = ({ activeSection = "home" }: NavbarRightProps) => {
         ))}
       </div>
 
-      {/* Mobile Toggle Button */}
       <button
         onClick={() => setOpen(!open)}
         className="md:hidden text-2xl"
@@ -51,7 +50,6 @@ const NavbarRight = ({ activeSection = "home" }: NavbarRightProps) => {
         )}
       </button>
 
-      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden flex flex-col z-[1000] justify-center align-center w-full rounded-b-2xl left-0 top-0 fixed text-center bg-dark p-12">
           {navData.map((item, index) => (
