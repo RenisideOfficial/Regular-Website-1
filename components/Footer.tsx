@@ -17,7 +17,7 @@ const Footer = () => {
             Nigeria
           </p>
         </div>
-        <p className="lg:text-right text-center">
+        <p className="lg:text-right text-center font-normal text-sm">
           © 2025 Harold Capital Management All Rights Reserved
         </p>
       </div>

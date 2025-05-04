@@ -2,6 +2,7 @@ import AboutUs from "@/components/AboutUs";
 import Believe from "@/components/Believe";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
+import Map from "@/components/Map";
 import MoreInfo from "@/components/MoreInfo";
 
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
         </section>
         <section id="contact">
           <Contact />
+        </section>
+        <section>
+          <Map />
         </section>
       </div>
     </>

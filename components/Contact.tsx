@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   return (
     <>
-      <div className="m-12 lg:flex lg:flex-row flex flex-col justify-between align-center mx-24">
+      <div className="m-12 lg:flex lg:flex-row flex flex-col justify-between align-center lg:mx-24 mx-8">
         <div className="lg:mx-[9%] gap-12 mt-24">
           <h1 className="lg:text-4xl text-3xl [text-shadow:3px_3px_6px_var(--color-gold)] mb-12">
             Get In Touch

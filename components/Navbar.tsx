@@ -40,12 +40,11 @@ const Navbar = () => {
 
   return (
     <header
-      className={`flex justify-between items-center transition-all duration-300 ${
+      className={`flex justify-between items-center transition-all duration-300 z-[1200] ${
         isScrolled
           ? "fixed top-0 left-0 right-0 backdrop-blur-md shadow-lg py-4 z-50"
           : "relative"
-      } ${isScrolled ? "mx-0 px-6 md:px-12" : "m-8 mx-6 md:mx-12"}`}
-    >
+      } ${isScrolled ? "mx-0 px-6 md:px-12" : "m-8 mx-6 md:mx-12"}`}>
       <NavbarLeft />
       <NavbarRight activeSection={activeSection} />
     </header>
