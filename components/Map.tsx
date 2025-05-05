@@ -1,27 +1,16 @@
 "use client";
+import dynamic from "next/dynamic";
 import React, { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
+import "leaflet/dist/leaflet.css"; // Make sure this is imported here or globally
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { FaSearch } from "react-icons/fa";
 import { ClockLoader } from "react-spinners";
 
-// Simple icon setup for Location
-const DefaultIcon = L.icon({
-  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
+// Dynamically import the MapComponent
+const MapComponent = dynamic(() => import("./MapComponent"), {
+  ssr: false,
 });
-L.Marker.prototype.options.icon = DefaultIcon;
-
-function ChangeView({ center }: { center: [number, number] }) {
-  const map = useMap();
-  map.setView(center);
-  return null;
-}
 
 export default function Map() {
   const [query, setQuery] = useState("");
@@ -91,13 +80,7 @@ export default function Map() {
 
       {/* Map */}
       <div className="flex-1">
-        <MapContainer center={position} zoom={13} className="h-full w-full">
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <ChangeView center={position} />
-          <Marker position={position}>
-            <Popup>{locationName}</Popup>
-          </Marker>
-        </MapContainer>
+        <MapComponent center={position} locationName={locationName} />
       </div>
     </div>
   );
